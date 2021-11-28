@@ -1,0 +1,37 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/buscaminas.css">
+  <meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+
+  <!-- Add your site or application content here -->
+  <div id="puntuacion"><span id="numeroMinas"></span><span id="tiempo">00:00:00</span>
+    <div id="generacion-tablero">
+      <input type="number" name="tama" id="tama" placeholder="Tamaño:" min="8" value="8" max="30">
+      <input type="number" name="bombas" id="bombas" placeholder="Bombas:"min="10" value="10" max="99">
+      <button type="button" onclick="nuevoTablero(document.getElementById('tama').value, document.getElementById('bombas').value)">Generar</button>
+    </div>
+  </div>
+  <div id="centrartablero">
+    <div id="tablero"></div>
+  </div>
+
+  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+
+</body>
+
+</html>

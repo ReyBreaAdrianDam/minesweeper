@@ -1,0 +1,98 @@
+
+*{
+  font-family: Arial, serif;
+
+}
+html{
+  --alturaTablero: 10;
+  --anchuraTablero: 10;
+}
+body{
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgb(39, 0, 79) 35%, rgb(84, 0, 185) 100%);
+}
+#centrartablero{
+
+  position: absolute;
+}
+#tablero{
+
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--anchuraTablero), 1fr);
+  grid-gap: 1px;
+}
+.boton{
+  position: relative;
+  text-align: center;
+  vertical-align: center;
+  background-color: rgba(255, 255, 255, 0.87);
+}
+.boton:hover{
+  background: #555555;
+}
+.fixed{
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+}
+
+
+#puntuacion{
+  left: 0;
+  right: 0;
+  font-size: 0.5cm;
+  background: white;
+}
+#tiempo{
+  position: absolute;
+  right: 0;
+}
+@media screen and (orientation:landscape) {
+  #tablero{
+    font-size: calc(70vh / var(--alturaTablero));
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(100vh - 1cm);
+    width: 100vh;
+  }
+  #centrartablero{
+    left:50%;
+    transform: translateX(-50%);
+  }
+
+}
+@media screen and (orientation:portrait) {
+  #tablero{
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: calc(70vw / var(--alturaTablero));
+    height: calc(100vw - 1cm);
+    width: 100vw;
+  }
+  #centrartablero{
+    top:50%;
+    transform: translateY(-50%);
+
+
+  }
+
+}
+.descubierta{
+  background: rgba(255, 250, 240, 0.85) !important;
+}
+.bomba{
+  /**background: red;*/
+}
+#generacion-tablero{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
